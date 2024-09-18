@@ -1,3 +1,6 @@
 spring:
   application:
     name: classroommission
+
+server:
+  port: 8099
