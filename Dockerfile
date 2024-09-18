@@ -1,12 +1,13 @@
-# Use uma imagem base do OpenJDK
-FROM openjdk:17-jdk-alpine
+FROM maven:3.8.6-openjdk-17 AS build
 
-# Define o diretório de trabalho no container
 WORKDIR /app
 
-# Copie o arquivo JAR gerado pelo Maven/Gradle para dentro do container
-COPY target/classroommission.jar app.jar
+COPY . .
 
-# Define o comando de inicialização da aplicação
-ENTRYPOINT ["java", "-jar", "app.jar"]
+RUN mvn clean package -DskipTests
 
+FROM openjdk:17-jdk-alpine
+
+COPY --from=builder /app/target/classroommission.jar classroommission.jar
+
+CMD ["java", "-jar", "classroommission.jar"]
