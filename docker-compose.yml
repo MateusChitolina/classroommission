@@ -1,0 +1,7 @@
+services:
+  springboot-app:
+    build: .
+    image: classroommission-imagem
+    container_name: classroommission-container
+    ports:
+      - "8080:8080"
