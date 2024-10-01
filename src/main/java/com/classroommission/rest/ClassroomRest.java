@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.classroommission.models.outputs.ClassroomProfileImageSearchOutput;
 import com.classroommission.models.outputs.ClassroomSearchAllOutput;
 import com.classroommission.service.ClassroomService;
 
@@ -27,6 +28,11 @@ public class ClassroomRest {
   @GetMapping("/search-all")
   public ResponseEntity<List<ClassroomSearchAllOutput>> getAllClassrooms(@RequestParam("userId") String userId) {
     return new ResponseEntity<>(classroomService.getAllClassrooms(userId), HttpStatus.OK);
+  }
+
+  @GetMapping("/user/profile-image/search")
+  public ResponseEntity<ClassroomProfileImageSearchOutput> getUserImage(@RequestParam("userId") String userId) {
+    return new ResponseEntity<>(classroomService.getUserImage(userId), HttpStatus.OK);
   }
   
 }
