@@ -16,7 +16,7 @@ import com.classroommission.service.ClassroomService;
 
 @RestController
 @RequestMapping("/classroom")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 public class ClassroomRest {
 
   private ClassroomService classroomService;
