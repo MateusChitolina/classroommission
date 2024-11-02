@@ -10,7 +10,7 @@ FROM eclipse-temurin:17-jdk-alpine
 
 RUN mkdir -p /db
 
-COPY --from=builder /app/src/main/java/com/classroommission/db/db.json /db/books.json
+COPY --from=builder /app/src/main/java/com/classroommission/db/books.json /db/books.json
 
 COPY --from=builder /app/target/classroommission.jar classroommission.jar
 
