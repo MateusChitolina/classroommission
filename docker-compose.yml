@@ -5,3 +5,5 @@ services:
     container_name: classroommission-container
     ports:
       - "8099:8099"
+    volumes:
+      - ./src/main/java/com/classroommission/db/books.json:/db/books.json
