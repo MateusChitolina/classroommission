@@ -12,6 +12,7 @@ public class StorageManagementConverter {
     bookSearchAllOutput.setPublisher(bookEntity.getPublisher());
     bookSearchAllOutput.setPublishmentYear(bookEntity.getPublishmentYear());
     bookSearchAllOutput.setQuantity(bookEntity.getQuantity());
+    bookSearchAllOutput.setAuthor(bookEntity.getAuthor());
 
     return bookSearchAllOutput;
   }

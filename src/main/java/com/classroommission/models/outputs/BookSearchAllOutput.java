@@ -6,6 +6,7 @@ public class BookSearchAllOutput {
   private Long publishmentYear;
   private String publisher;
   private Long quantity;
+  private String author;
 
   public Long getId() {
     return id;
@@ -45,5 +46,13 @@ public class BookSearchAllOutput {
 
   public void setQuantity(Long quantity) {
     this.quantity = quantity;
+  }
+
+  public String getAuthor() {
+    return this.author;
+  }
+
+  public void setAuthor(String author) {
+    this.author = author;
   }
 }

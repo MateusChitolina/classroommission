@@ -36,7 +36,8 @@ public class StorageManagementRepositoryImpl implements StorageManagementReposit
             bookEntity.getTitle(),
             bookEntity.getPublishmentYear(),
             bookEntity.getPublisher(),
-            bookEntity.getQuantity()
+            bookEntity.getQuantity(),
+            bookEntity.getAuthor()
     );
 
     bookEntityList.add(newBook);

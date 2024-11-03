@@ -34,6 +34,7 @@ public class StorageManagementService {
     bookEntity.setPublishmentYear(bookInput.getPublishmentYear());
     bookEntity.setQuantity(bookInput.getQuantity());
     bookEntity.setTitle(bookInput.getTitle());
+    bookEntity.setAuthor(bookInput.getAuthor());
 
     storageManagementRepository.saveBook(bookEntity);
 }

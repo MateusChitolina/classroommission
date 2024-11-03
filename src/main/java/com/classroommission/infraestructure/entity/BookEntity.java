@@ -6,15 +6,17 @@ public class BookEntity {
   private Long publishmentYear;
   private String publisher;
   private Long quantity;
+  private String author;
 
   //entity não tem constructor, mas como vai ser simulado os dados precisa
   public BookEntity() {}
-  public BookEntity(Long id, String title, Long publishmentYear, String publisher, Long quantity) {
+  public BookEntity(Long id, String title, Long publishmentYear, String publisher, Long quantity, String author) {
     this.id = id;
     this.title = title;
     this.publishmentYear = publishmentYear;
     this.publisher = publisher;
     this.quantity = quantity;
+    this.author = author;
   }
 
   public Long getId() {
@@ -57,5 +59,12 @@ public class BookEntity {
     this.quantity = quantity;
   }
   
+  public String getAuthor() {
+    return this.author;
+  }
+
+  public void setAuthor(String author) {
+    this.author = author;
+  }
   
 }

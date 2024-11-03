@@ -5,6 +5,7 @@ public class BookInput {
   private Long publishmentYear;
   private String publisher;
   private Long quantity;
+  private String author;
 
   public String getTitle() {
     return title;
@@ -36,5 +37,13 @@ public class BookInput {
 
   public void setQuantity(Long quantity) {
     this.quantity = quantity;
+  }
+
+  public String getAuthor() {
+    return this.author;
+  }
+
+  public void setAuthor(String author) {
+    this.author = author;
   }
 }
