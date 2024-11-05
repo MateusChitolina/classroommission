@@ -16,5 +16,5 @@ COPY --from=builder /app/target/classroommission.jar classroommission.jar
 
 VOLUME /db
 
-CMD ["java", "-jar", "classroommission.jar"]
+CMD ["java", "-jar", "classroommission.jar", "--spring.profiles.active=prod"]
 

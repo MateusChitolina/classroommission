@@ -1,6 +1,42 @@
 spring:
   application:
     name: classroommission
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://dpg-csl229ij1k6c73bpsfmg-a.oregon-postgres.render.com/testdb_e3yg
+    username: dba
+    password: LQIv5mHNFzD7uxWE6HO46ef2VIOPb1fq
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
 
 server:
   port: 8099
+
+---
+spring:
+  config:
+      activate:
+        on-profile: dev
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+---
+spring:
+  config:
+      activate:
+        on-profile: prod
+  jpa:
+    show-sql: false
+    properties:
+      hibernate:
+        show_sql: false
+        format_sql: false
