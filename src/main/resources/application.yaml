@@ -7,13 +7,8 @@ spring:
     username: dba
     password: LQIv5mHNFzD7uxWE6HO46ef2VIOPb1fq
   jpa:
-    show-sql: true
     hibernate:
       ddl-auto: none
-    properties:
-      hibernate:
-        show_sql: true
-        format_sql: true
 
 server:
   port: 8099
